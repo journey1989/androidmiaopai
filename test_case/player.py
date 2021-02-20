@@ -314,7 +314,21 @@ class TestPlayer(unittest.TestCase):
          sleep(1)
          get_snapshot('春暖中国')
 
-
+     def test_16_player(self):
+         '''发现：种草播放5条视频'''
+         if poco(text='种草').exists():
+             poco(text='种草').click()
+             for i in range(5):
+                 if poco(yaml_data['cover']).exists():
+                     poco(yaml_data['cover'])[i].long_click()
+                     sleep(3)
+                     poco(yaml_data['back']).click()
+                 else:
+                     log.debug('======种草视频已被刷完=====')
+         else:
+             log.debug('======种草类视频已下线======')
+         sleep(1)
+         get_snapshot('种草美食')
 
 
      def tearDown(self) -> None:
