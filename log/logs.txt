@@ -1,0 +1,1 @@
+2021-02-19 19:50:19,351 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====

@@ -1,0 +1,61 @@
+text_view:  'com.yixia.videoeditor:id/edit_text_view'
+password_next:  'com.yixia.videoeditor:id/btn_password_next'
+
+play: 'com.yixia.videoeditor:id/btn_play'
+test_kids_mode_quit:  'com.yixia.videoeditor:id/test_kids_mode_quit'
+
+kids_mode:  'com.yixia.videoeditor:id/btn_kids_mode'
+edit_text_view: 'com.yixia.videoeditor:id/edit_text_view'
+
+avatar: 'com.yixia.videoeditor:id/iv_avatar'
+name: 'com.yixia.videoeditor:id/tv_name'
+
+follow: 'com.yixia.videoeditor:id/btn_follow'
+praise: 'com.yixia.videoeditor:id/btn_praise'
+
+back: 'com.yixia.videoeditor:id/btn_back'
+des:  'com.yixia.videoeditor:id/tv_des'
+
+share:  'com.yixia.videoeditor:id/btn_share'
+comment:  'com.yixia.videoeditor:id/tv_comment'
+
+favorites:  'com.yixia.videoeditor:id/btn_favorites'
+like: 'com.yixia.videoeditor:id/btn_like'
+
+horizontal_screen:  'com.yixia.videoeditor:id/btn_horizontal_screen'
+more: 'com.yixia.videoeditor:id/btn_more'
+
+camera: 'com.yixia.videoeditor:id/btn_camera'
+permission_allow_button:  'com.android.packageinstaller:id/permission_allow_button'
+
+permission_allow_button1: 'com.android.packageinstaller:id/permission_allow_button'
+permission_allow_button2: 'com.android.packageinstaller:id/permission_allow_button'
+start:  'com.yixia.videoeditor:id/ivb_start'
+
+edit_title: 'com.yixia.videoeditor:id/edit_title'
+publish:  'com.yixia.videoeditor:id/btn_publish'
+
+album:  'com.yixia.videoeditor:id/btn_album'
+image_cancel: 'com.yixia.videoeditor:id/tv_image_cancel'
+
+cover:  'com.yixia.videoeditor:id/iv_cover'
+cancel: 'com.yixia.videoeditor:id/btn_cancel'
+
+media_thumbnail:  'com.yixia.videoeditor:id/media_thumbnail'
+menu_crop:  'com.yixia.videoeditor:id/menu_crop'
+
+topic_share:  'com.yixia.videoeditor:id/tv_topic_share'
+
+loopviewpager:  'com.yixia.videoeditor:id/cbLoopViewPager'
+icon: 'com.yixia.videoeditor:id/icon'
+
+msg:  'com.yixia.videoeditor:id/tv_msg'
+icon_enter: 'com.yixia.videoeditor:id/icon_enter_arrow'
+
+title:  'com.yixia.videoeditor:id/tv_title'
+group:  "android.view.ViewGroup"
+layout: "android.widget.LinearLayout"
+host: "com.yixia.videoeditor:id/nav_host_fragment"
+pager:  "com.yixia.videoeditor:id/view_pager"
+view: "com.yixia.videoeditor:id/recycler_view"
+
