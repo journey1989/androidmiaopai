@@ -1,5 +1,8 @@
 from base.tools import *
 import unittest,string,random,yaml
+from airtest.core.android.adb import *
+from base.config import RECORDER_PATH
+from airtest.core.android.recorder import *
 
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
@@ -18,11 +21,14 @@ class TestRelease(unittest.TestCase):
        def test_01_release(self):
            '''发布:调登录'''
            stars_app()
+           recorder().start_recording(max_time=1800)
            poco(text='发布').click()
            sim_code_login()
+           recorder().stop_recording(output='%s发布调登录.mp4' % RECORDER_PATH)
 
        def test_02_release(self):
            '''发布：拍摄视频'''
+           recorder().start_recording(max_time=1800)
            poco(text='发布').click()
            poco(yaml_data['camera']).click()
            if poco(yaml_data['permission_allow_button']).exists():   #相机
@@ -53,8 +59,10 @@ class TestRelease(unittest.TestCase):
                    log.debug('======无麦克风权限弹窗======')
                    poco(yaml_data['start']).click()
                    sleep(4)
+           recorder().stop_recording(output='%s发布视频.mp4' % RECORDER_PATH)
        def test_03_release(self):
            '''发布：编辑视频封面+发布视频'''
+           recorder().start_recording(max_time=1800)
            poco(yaml_data['cover']).click()
            if poco(yaml_data['media_thumbnail']).exists():
                poco(yaml_data['media_thumbnail'])[0].click()
@@ -64,10 +72,12 @@ class TestRelease(unittest.TestCase):
            poco(yaml_data['edit_title']).set_text('airtest发布视频')
            poco(yaml_data['publish']).click()
            sleep(10)
+           recorder().stop_recording(output='%s编辑视频封面.mp4' % RECORDER_PATH)
 
 
        def test_04_release(self):
            '''发布：上传视频'''
+           recorder().start_recording(max_time=1800)
            poco(text='发布').click()
            poco(yaml_data['album']).click()  #上传
            if poco(yaml_data['media_thumbnail']).exists():
@@ -82,21 +92,26 @@ class TestRelease(unittest.TestCase):
            else:
                poco(yaml_data['image_cancel']).click()
                poco(yaml_data['cancel']).click()
+           recorder().stop_recording(output='%s上传视频.mp4' % RECORDER_PATH)
 
 
        def test_05_release(self):
            '''发布：查看发布视频'''
+           recorder().start_recording(max_time=1800)
            poco(text='我的').click()
            poco(yaml_data['cover'])[0].click()
            sleep(2)
            keyevent("KEYCODE_BACK")
+           recorder().stop_recording(output='%s查看发布视频.mp4' % RECORDER_PATH)
 
 
 
        def test_06_release(self):
            '''发布：删除发布视频'''
+           recorder().start_recording(max_time=1800)
            poco(yaml_data['cover'])[0].long_click()
            poco(text='删除').click()
+           recorder().stop_recording(output='%s删除发布视频.mp4' % RECORDER_PATH)
 
        def tearDown(self) -> None:
            pass

@@ -1,61 +1,231 @@
-text_view:  'com.yixia.videoeditor:id/edit_text_view'
-password_next:  'com.yixia.videoeditor:id/btn_password_next'
-
-play: 'com.yixia.videoeditor:id/btn_play'
-test_kids_mode_quit:  'com.yixia.videoeditor:id/test_kids_mode_quit'
-
-kids_mode:  'com.yixia.videoeditor:id/btn_kids_mode'
-edit_text_view: 'com.yixia.videoeditor:id/edit_text_view'
-
+album:  'com.yixia.videoeditor:id/btn_album'
 avatar: 'com.yixia.videoeditor:id/iv_avatar'
-name: 'com.yixia.videoeditor:id/tv_name'
+action: 'com.yixia.videoeditor:id/btn_action'
 
-follow: 'com.yixia.videoeditor:id/btn_follow'
-praise: 'com.yixia.videoeditor:id/btn_praise'
+
+
+
+
+
 
 back: 'com.yixia.videoeditor:id/btn_back'
-des:  'com.yixia.videoeditor:id/tv_des'
+black_author: 'com.yixia.videoeditor:id/btn_black_author'
 
-share:  'com.yixia.videoeditor:id/btn_share'
+
+
+
+
+
+
+
+
 comment:  'com.yixia.videoeditor:id/tv_comment'
-
-favorites:  'com.yixia.videoeditor:id/btn_favorites'
-like: 'com.yixia.videoeditor:id/btn_like'
-
-horizontal_screen:  'com.yixia.videoeditor:id/btn_horizontal_screen'
-more: 'com.yixia.videoeditor:id/btn_more'
-
-camera: 'com.yixia.videoeditor:id/btn_camera'
-permission_allow_button:  'com.android.packageinstaller:id/permission_allow_button'
-
-permission_allow_button1: 'com.android.packageinstaller:id/permission_allow_button'
-permission_allow_button2: 'com.android.packageinstaller:id/permission_allow_button'
-start:  'com.yixia.videoeditor:id/ivb_start'
-
-edit_title: 'com.yixia.videoeditor:id/edit_title'
-publish:  'com.yixia.videoeditor:id/btn_publish'
-
-album:  'com.yixia.videoeditor:id/btn_album'
-image_cancel: 'com.yixia.videoeditor:id/tv_image_cancel'
-
 cover:  'com.yixia.videoeditor:id/iv_cover'
 cancel: 'com.yixia.videoeditor:id/btn_cancel'
+camera: 'com.yixia.videoeditor:id/btn_camera'
+contact:  'com.yixia.videoeditor:id/et_contact'
+change_birthday:  'com.yixia.videoeditor:id/btn_change_birthday'
+clean:  'com.yixia.videoeditor:id/btn_clean'
+clear:  'com.yixia.videoeditor:id/btn_clear'
 
+
+
+
+
+
+des:  'com.yixia.videoeditor:id/tv_des'
+delete: 'com.yixia.videoeditor:id/btn_delete'
+
+
+
+
+
+
+
+
+
+edit_text_view: 'com.yixia.videoeditor:id/edit_text_view'
+edit_title: 'com.yixia.videoeditor:id/edit_title'
+edit_sign:  'com.yixia.videoeditor:id/edit_sign'
+edit_open_id: 'com.yixia.videoeditor:id/edit_open_id'
+edit_name:  'com.yixia.videoeditor:id/edit_name'
+edit_profile_photo: 'com.yixia.videoeditor:id/image_user_edit_profile_photo'
+
+
+
+
+
+
+
+
+follow: 'com.yixia.videoeditor:id/btn_follow'
+favorites:  'com.yixia.videoeditor:id/btn_favorites'
+follow_all: 'com.yixia.videoeditor:id/btn_follow_all'
+feedback: 'com.yixia.videoeditor:id/btn_feedback'
+following:  'com.yixia.videoeditor:id/btn_following'
+follows:  'com.yixia.videoeditor:id/btn_followers'
+feedback_submit:  'com.yixia.videoeditor:id/tv_feedback_submit'
+feedback_phone: 'com.yixia.videoeditor:id/et_feedback_phone'
+feedback_suggestion:  'com.yixia.videoeditor:id/et_feedback_suggestion'
+
+
+
+
+
+
+
+group:  "android.view.ViewGroup"
+gender: 'com.yixia.videoeditor:id/btn_gender'
+
+
+
+
+
+
+
+
+
+horizontal_screen:  'com.yixia.videoeditor:id/btn_horizontal_screen'
+host: "com.yixia.videoeditor:id/nav_host_fragment"
+
+
+
+
+
+
+
+
+image_cancel: 'com.yixia.videoeditor:id/tv_image_cancel'
+icon: 'com.yixia.videoeditor:id/icon'
+icon_enter: 'com.yixia.videoeditor:id/icon_enter_arrow'
+input:  'com.yixia.videoeditor:id/edit_input'
+
+
+
+
+
+
+kids_mode:  'com.yixia.videoeditor:id/btn_kids_mode'
+
+
+
+
+
+
+
+
+
+
+like: 'com.yixia.videoeditor:id/btn_like'
+loopviewpager:  'com.yixia.videoeditor:id/cbLoopViewPager'
+layout: "android.widget.LinearLayout"
+login:  'com.yixia.videoeditor:id/btn_login'
+
+
+
+
+
+
+
+more: 'com.yixia.videoeditor:id/btn_more'
+msg:  'com.yixia.videoeditor:id/tv_msg'
 media_thumbnail:  'com.yixia.videoeditor:id/media_thumbnail'
 menu_crop:  'com.yixia.videoeditor:id/menu_crop'
+message_switch: 'com.yixia.videoeditor:id/btn_message_switch'
 
-topic_share:  'com.yixia.videoeditor:id/tv_topic_share'
 
-loopviewpager:  'com.yixia.videoeditor:id/cbLoopViewPager'
-icon: 'com.yixia.videoeditor:id/icon'
 
-msg:  'com.yixia.videoeditor:id/tv_msg'
-icon_enter: 'com.yixia.videoeditor:id/icon_enter_arrow'
 
-title:  'com.yixia.videoeditor:id/tv_title'
-group:  "android.view.ViewGroup"
-layout: "android.widget.LinearLayout"
-host: "com.yixia.videoeditor:id/nav_host_fragment"
+
+
+
+name: 'com.yixia.videoeditor:id/tv_name'
+
+
+
+
+
+
+
+ok: "com.yixia.videoeditor:id/btn_ok"
+
+
+
+
+
+
+
+
+
+password_next:  'com.yixia.videoeditor:id/btn_password_next'
+play: 'com.yixia.videoeditor:id/btn_play'
+publish:  'com.yixia.videoeditor:id/btn_publish'
 pager:  "com.yixia.videoeditor:id/view_pager"
+permission_allow_button:  'com.android.packageinstaller:id/permission_allow_button'
+permission_allow_button1: 'com.android.packageinstaller:id/permission_allow_button'
+permission_allow_button2: 'com.android.packageinstaller:id/permission_allow_button'
+praise: 'com.yixia.videoeditor:id/btn_praise'
+
+
+
+
+
+
+
+remove: 'com.yixia.videoeditor:id/btn_remove'
+
+
+
+
+
+
+
+switch: 'com.yixia.videoeditor:id/btn_switch'
+share:  'com.yixia.videoeditor:id/btn_share'
+start:  'com.yixia.videoeditor:id/ivb_start'
+search: 'com.yixia.videoeditor:id/btn_search'
+submit: 'com.yixia.videoeditor:id/btn_submit'
+setting:  'com.yixia.videoeditor:id/btn_setting'
+save: 'com.yixia.videoeditor:id/btn_save'
+setting_login:  'com.yixia.videoeditor:id/tv_setting_logout'
+setting_logoff: 'com.yixia.videoeditor:id/tv_setting_logoff'
+setting_additional_setting: 'com.yixia.videoeditor:id/cl_setting_additional_setting'
+setting_clear_cache:  'com.yixia.videoeditor:id/cl_setting_clear_cache'
+setting_feedback: 'com.yixia.videoeditor:id/cl_setting_feedback'
+setting_app_statement:  'com.yixia.videoeditor:id/cl_setting_app_statement'
+setting_privacy:  'com.yixia.videoeditor:id/cl_setting_privacy'
+setting_check_update: 'com.yixia.videoeditor:id/cl_setting_check_update'
+setting_wallet: 'com.yixia.videoeditor:id/cl_setting_wallet'
+setting_backlist: 'com.yixia.videoeditor:id/cl_setting_blacklist'
+setting_teenager: 'com.yixia.videoeditor:id/tv_setting_teenager'
+
+
+
+
+
+
+
+
+text_view:  'com.yixia.videoeditor:id/edit_text_view'
+test_kids_mode_quit:  'com.yixia.videoeditor:id/test_kids_mode_quit'
+topic_share:  'com.yixia.videoeditor:id/tv_topic_share'
+title:  'com.yixia.videoeditor:id/tv_title'
+
+
+
+
+
+
 view: "com.yixia.videoeditor:id/recycler_view"
 
+
+
+
+
+
+
+
+
+wv_day: 'com.yixia.videoeditor:id/wv_day'
+wv_month: 'com.yixia.videoeditor:id/wv_month'
+wv_year:  'com.yixia.videoeditor:id/wv_year'

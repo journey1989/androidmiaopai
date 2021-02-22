@@ -1,3 +1,5 @@
+
+from base.config import RECORDER_PATH
 from base.tools import *
 import unittest,string,random,yaml
 
@@ -9,16 +11,20 @@ with open('%s/resourceid.yaml'%DATA_PATH) as f:
 
 
 
+
+
+
 class TestPlayer(unittest.TestCase):
 
      def setUp(self) -> None:
          pass
 
 
-     def test_00_player(self):
+     def test_01_player(self):
          '''精选：列表和全屏来回切换播放10条视频'''
-         stop_app('com.yixia.videoeditor')
-         start_app('com.yixia.videoeditor')
+
+         stars_app()
+         recorder().start_recording(max_time=1800)
          for i in range(1, 11):
                  poco(yaml_data['play']).click()
                  sleep(5)
@@ -27,19 +33,22 @@ class TestPlayer(unittest.TestCase):
                  poco(yaml_data['back']).click()
                  sleep(1)
                  swipe((561, 1686), (561, 260))
+         recorder().stop_recording(output='%s列表和全屏来回切换播放10条视频.mp4' % RECORDER_PATH)
 
 
-     def test_01_player(self):
+     def test_02_player(self):
          '''精选：列表播放10条视频'''
+         recorder().start_recording(max_time=1800)
          for i in range(1, 6):
              poco(yaml_data['play']).click()
              sleep(5)
              swipe((561, 1600), (561, 260))
+         recorder().stop_recording(output='%s精选列表播放10条视频.mp4' % RECORDER_PATH)
 
-
-     def test_02_player(self):
+     def test_03_player(self):
          '''关注：列表播放5条视频'''
-         stars_app()
+
+         recorder().start_recording(max_time=1800)
          poco(yaml_data['follow']).click()
          sim_code_login()
          sleep(1)
@@ -51,11 +60,13 @@ class TestPlayer(unittest.TestCase):
                  swipe((561, 1600), (561, 260))
          else:
              log.debug('=====无视频，不需要操作=====')
+         recorder().stop_recording(output='%s关注列表播放5条视频.mp4' % RECORDER_PATH)
 
 
 
-     def test_03_player(self):
+     def test_04_player(self):
          '''精选：全屏播放10条视频'''
+         recorder().start_recording(max_time=1800)
          poco(text='精选').click()
          poco(yaml_data['des']).click()
          for i in range(1, 10):
@@ -63,21 +74,24 @@ class TestPlayer(unittest.TestCase):
              sleep(5)
              swipe((561, 1600), (561, 260))
          poco(yaml_data['horizontal_screen']).click()
+         recorder().stop_recording(output='%s全屏播放10条视频.mp4' % RECORDER_PATH)
 
 
-     def test_04_player(self):
+     def test_05_player(self):
          '''精选：横屏播放10条视频'''
-
+         recorder().start_recording(max_time=1800)
          for i in range(1, 10):
              sleep(5)
              swipe((1120, 926), (1120, 220))
          keyevent("KEYCODE_BACK")
          keyevent("KEYCODE_BACK")
+         recorder().stop_recording(output='%s横屏播放10条视频.mp4' % RECORDER_PATH)
 
 
 
-     def test_05_player(self):
+     def test_06_player(self):
          '''沉浸式：顶部滑动5条+播放10条视频'''
+         recorder().start_recording(max_time=1800)
          stop_app('com.yixia.videoeditor')
          start_app('com.yixia.videoeditor')
          poco(text='关注').click()
@@ -92,11 +106,13 @@ class TestPlayer(unittest.TestCase):
                  else:
                      log.debug('=====无更多视频======')
          keyevent("KEYCODE_BACK")
+         recorder().stop_recording(output='%s沉浸式顶部滑动5条+播放10条视频.mp4' % RECORDER_PATH)
 
 
 
-     def test_06_player(self):
+     def test_07_player(self):
          '''发现：三农播放5条视频'''
+         recorder().start_recording(max_time=1800)
          stop_app('com.yixia.videoeditor')
          start_app('com.yixia.videoeditor')
          poco(text='发现').click()
@@ -113,14 +129,16 @@ class TestPlayer(unittest.TestCase):
              log.debug('======三农视频已下线======')
          sleep(1)
          get_snapshot('发现三农')
+         recorder().stop_recording(output='%s三农播放5条视频.mp4' % RECORDER_PATH)
 
 
 
 
 
 
-     def test_07_player(self):
+     def test_08_player(self):
          '''发现：汽车播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='汽车').exists():
              poco(text='汽车').click()
              for i in range(5):
@@ -134,11 +152,13 @@ class TestPlayer(unittest.TestCase):
              log.debug('======汽车类视频已下线======')
          sleep(1)
          get_snapshot('发现汽车')
+         recorder().stop_recording(output='%s汽车播放5条视频.mp4' % RECORDER_PATH)
 
 
 
-     def test_08_player(self):
+     def test_09_player(self):
          '''发现：生活播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='生活').exists():
              poco(text='生活').click()
              for i in range(5):
@@ -152,10 +172,12 @@ class TestPlayer(unittest.TestCase):
              log.debug('=======生活类视频已下线======')
          sleep(1)
          get_snapshot('发现生活')
+         recorder().stop_recording(output='%s生活播放5条视频.mp4' % RECORDER_PATH)
 
 
-     def test_09_player(self):
+     def test_10_player(self):
          '''发现：影视播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='影视').exists():
              poco(text='影视').click()
              for i in range(5):
@@ -169,9 +191,11 @@ class TestPlayer(unittest.TestCase):
              log.debug('=======影视视频类已下线======')
          sleep(1)
          get_snapshot('发现影视')
+         recorder().stop_recording(output='%s影视播放5条视频.mp4' % RECORDER_PATH)
 
-     def test_10_player(self):
+     def test_11_player(self):
          '''发现：社会播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='社会').exists():
              poco(text='社会').click()
              for i in range(5):
@@ -185,9 +209,11 @@ class TestPlayer(unittest.TestCase):
              log.debug('=======社会类视频已下线=====')
          sleep(1)
          get_snapshot('发现社会')
+         recorder().stop_recording(output='%s社会播放5条视频.mp4' % RECORDER_PATH)
 
-     def test_11_player(self):
+     def test_12_player(self):
          '''发现：美食播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='美食').exists():
              poco(text='美食').click()
              for i in range(5):
@@ -201,10 +227,12 @@ class TestPlayer(unittest.TestCase):
              log.debug('======美食类视频已下线======')
          sleep(1)
          get_snapshot('发现美食')
+         recorder().stop_recording(output='%s美食播放5条视频.mp4' % RECORDER_PATH)
 
 
-     def test_12_player(self):
+     def test_13_player(self):
          '''发现：旅行播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='旅行').exists():
              poco(text='旅行').click()
              for i in range(5):
@@ -218,11 +246,13 @@ class TestPlayer(unittest.TestCase):
               log.debug('======旅行类视频已下线=======')
          sleep(1)
          get_snapshot('发现旅行')
+         recorder().stop_recording(output='%s旅行播放5条视频.mp4' % RECORDER_PATH)
 
 
 
-     def test_13_player(self):
+     def test_14_player(self):
          '''发现：抗击疫情播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='抗击疫情').exists():
              poco(text='抗击疫情').click()
              for i in range(6):
@@ -249,10 +279,12 @@ class TestPlayer(unittest.TestCase):
                  poco(yaml_data['back']).click()
          sleep(1)
          get_snapshot('抗击疫情')
+         recorder().stop_recording(output='%s抗击疫情.mp4' % RECORDER_PATH)
 
 
-     def test_14_player(self):
+     def test_15_player(self):
          '''发现：网络过年播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='网络过年').exists():
              poco(text='网络过年').click()
              for i in range(6):
@@ -280,9 +312,11 @@ class TestPlayer(unittest.TestCase):
              poco(yaml_data['back']).click()
          sleep(1)
          get_snapshot('网络过年')
+         recorder().stop_recording(output='%s网络过年.mp4' % RECORDER_PATH)
 
-     def test_15_player(self):
+     def test_16_player(self):
          '''发现：春暖中国播放6条视频'''
+         recorder().start_recording(max_time=1800)
          stop_app('com.yixia.videoeditor')
          start_app('com.yixia.videoeditor')
          poco(text='发现').click()
@@ -313,9 +347,11 @@ class TestPlayer(unittest.TestCase):
              poco(yaml_data['back']).click()
          sleep(1)
          get_snapshot('春暖中国')
+         recorder().stop_recording(output='%s春暖中国.mp4' % RECORDER_PATH)
 
-     def test_16_player(self):
+     def test_17_player(self):
          '''发现：种草播放5条视频'''
+         recorder().start_recording(max_time=1800)
          if poco(text='种草').exists():
              poco(text='种草').click()
              for i in range(5):
@@ -328,7 +364,8 @@ class TestPlayer(unittest.TestCase):
          else:
              log.debug('======种草类视频已下线======')
          sleep(1)
-         get_snapshot('种草美食')
+         get_snapshot('种草视频')
+         recorder().stop_recording(output='%s种草播放5条视频.mp4' % RECORDER_PATH)
 
 
      def tearDown(self) -> None:

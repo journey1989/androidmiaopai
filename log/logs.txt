@@ -1,1 +1,105 @@
-2021-02-19 19:50:19,351 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 11:38:10,155 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 12:10:39,089 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:27:40,102 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:30:16,892 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:40:26,529 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:40:52,717 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:51] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 14:41:42,325 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:42:08,112 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:51] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 14:47:26,064 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:50:22,246 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:50:41,822 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:225] - DEBUG: <class 'Exception'>
+2021-02-22 14:51:46,716 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 14:52:10,782 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:225] - DEBUG: <class 'Exception'>
+2021-02-22 14:58:46,848 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:11:23,523 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:15:40,582 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:16:04,927 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:230] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:20:18,674 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:20:42,846 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:230] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:22:37,222 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:23:01,324 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:230] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:24:24,957 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:24:47,922 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:231] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:30:33,008 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:30:58,980 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:246] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:33:00,498 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:33:26,265 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:248] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:33:50,638 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:34:15,697 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:247] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:36:02,747 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:36:27,494 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:248] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:36:51,089 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:37:16,398 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:248] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:37:34,094 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:37:58,740 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:248] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:39:05,623 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:39:29,947 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:248] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:40:13,989 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:40:38,599 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:250] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:48:39,991 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:49:07,111 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:247] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:51:22,529 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:51:54,976 - /Users/yixia/PycharmProjects/miaopai/test_case/AMP_login.py[line:249] - DEBUG: ========<class 'poco.exceptions.PocoNoSuchNodeException'>========
+2021-02-22 15:55:14,151 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:56:01,572 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:51] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 15:57:55,552 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 15:58:42,295 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:52] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 16:02:19,424 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 16:05:19,712 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 16:06:47,960 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 16:07:28,017 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:51] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 16:09:12,069 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 16:09:53,441 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:51] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 16:11:41,818 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:13] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 16:12:32,237 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:51] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 16:19:05,371 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:14] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 16:30:35,340 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:14] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 17:29:21,530 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:355] - DEBUG: 手机未安装微信，不分享微信
+2021-02-22 17:29:21,569 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:368] - DEBUG: 手机未安装QQ，不分享QQ
+2021-02-22 17:29:21,610 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:375] - DEBUG: 手机未安装微博，不分享微博
+2021-02-22 17:46:12,908 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:14] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 17:46:45,887 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:355] - DEBUG: 手机未安装微信，不分享微信
+2021-02-22 17:46:46,000 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:368] - DEBUG: 手机未安装QQ，不分享QQ
+2021-02-22 17:46:46,112 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:375] - DEBUG: 手机未安装微博，不分享微博
+2021-02-22 17:55:08,974 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:356] - DEBUG: 手机未安装QQ，不分享QQ
+2021-02-22 17:55:09,006 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:363] - DEBUG: 手机未安装微博，不分享微博
+2021-02-22 17:56:04,228 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:363] - DEBUG: 手机未安装微博，不分享微博
+2021-02-22 17:57:28,013 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:357] - DEBUG: 手机未安装QQ，不分享QQ
+2021-02-22 18:02:37,509 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:357] - DEBUG: 手机未安装QQ，不分享QQ
+2021-02-22 18:03:54,709 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:357] - DEBUG: 手机未安装QQ，不分享QQ
+2021-02-22 18:05:26,488 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:365] - DEBUG: 手机未安装微博，不分享微博
+2021-02-22 18:06:47,263 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:366] - DEBUG: 手机未安装微博，不分享微博
+2021-02-22 18:56:35,886 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 18:56:58,940 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:68] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 18:57:06,187 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 18:57:28,228 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 18:57:32,647 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 18:58:03,354 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 18:58:40,752 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 18:59:12,114 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 18:59:41,073 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 18:59:44,942 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:00:09,419 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 19:00:13,071 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:00:40,096 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 19:00:43,595 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:01:07,031 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 19:01:11,799 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:01:34,069 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 19:01:38,932 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:02:04,237 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:54] - DEBUG: ======当前设备没有sim卡，无法使用一键登录======
+2021-02-22 19:02:08,853 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:02:27,211 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:02:47,184 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:03:05,234 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:03:23,472 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:03:52,031 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:04:12,565 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:04:30,895 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:04:49,540 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:05:07,899 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:05:26,463 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:05:44,862 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:06:24,934 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====
+2021-02-22 19:06:51,040 - /Users/yixia/PycharmProjects/miaopai/base/tools.py[line:16] - DEBUG: =====执行清除数据，启动app=====

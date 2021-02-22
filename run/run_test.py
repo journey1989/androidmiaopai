@@ -7,7 +7,7 @@ from base.tools import *
 def report():
 
     nowtime = time.strftime('%Y%m%d %H%M%S')
-    discover = unittest.defaultTestLoader.discover(TEST_PATH, 'player.py')
+    discover = unittest.defaultTestLoader.discover(TEST_PATH, 'AMP_*.py')
     report_name = '秒拍ui自动化测试报告' + str(nowtime)
 
 

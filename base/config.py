@@ -1,4 +1,4 @@
-import os,nnlog
+import os,nnlog,time
 '''
 配置路径
 '''
@@ -11,12 +11,14 @@ SNAPSHOT_PATH = os.path.join(BASE_PATH, 'snapshot/')
 TEST_PATH =  os.path.join(BASE_PATH, 'test_case/')
 DATA_PATH = os.path.join(BASE_PATH, 'data')
 
+nowtime = time.strftime('%Y%m%d %H%M%S')
+RECORDER_PATH = os.path.join(BASE_PATH , 'recorder' + '/'+ nowtime)
 logname = os.path.join(LOG_PATH, 'logs.txt')
 
 log = nnlog.Logger(file_name=logname, level='debug', when='D')
 
 
-print(DATA_PATH)
+print(RECORDER_PATH)
 
 
 
