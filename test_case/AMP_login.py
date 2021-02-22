@@ -159,7 +159,9 @@ class TestLogin(unittest.TestCase):
         stars_app()
         recorder().start_recording(max_time=1800)
         poco(yaml_data['des']).click()
+        poco(yaml_data['follow']).click()
         sim_code_login()
+        sleep(1)
         get_snapshot('全屏页面：关注调登录')
         recorder().stop_recording(output='%s全屏关注调登录.mp4' % RECORDER_PATH)
 
