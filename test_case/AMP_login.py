@@ -37,7 +37,7 @@ class TestLogin(unittest.TestCase):
         one_click_login()
         sleep(1)
         get_snapshot('一键登录')
-        recorder().stop_recording(output='%s一键登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s一键登录1.mp4' % RECORDER_PATH)
 
     def test_02_login(self):
         '''验证码登录'''
@@ -48,7 +48,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         get_snapshot('验证码登录')
         sleep(1)
-        recorder().stop_recording(output='%s验证码登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s验证码登录2.mp4' % RECORDER_PATH)
 
     def test_03_login(self):
         '''微信登录'''
@@ -62,7 +62,7 @@ class TestLogin(unittest.TestCase):
         value = poco(yaml_data['name']).attr('text')
         assert_equal(value, '秒拍微信登录',  msg='微信登录成功')
         sleep(1)
-        recorder().stop_recording(output='%s微信登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s微信登录3.mp4' % RECORDER_PATH)
 
     def test_04_login(self):
         '''qq登录'''
@@ -73,7 +73,7 @@ class TestLogin(unittest.TestCase):
         qq_login()
         get_snapshot('qq登录')
         sleep(1)
-        recorder().stop_recording(output='%sqq登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%sqq登录4.mp4' % RECORDER_PATH)
 
     def test_05_login(self):
         '''微博登录'''
@@ -85,7 +85,7 @@ class TestLogin(unittest.TestCase):
         sleep(1)
         get_snapshot('微博登录')
         sleep(1)
-        recorder().stop_recording(output='%s微博登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s微博登录5.mp4' % RECORDER_PATH)
 
     def test_06_login(self):
         '''关注tab:一键关注调登录'''
@@ -96,7 +96,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         get_snapshot('关注tab:一键关注调登录')
         sleep(1)
-        recorder().stop_recording(output='%s一键关注调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s一键关注调登录6.mp4' % RECORDER_PATH)
 
     def test_07_login(self):
         '''关注tab:单个关注调登录'''
@@ -107,7 +107,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         get_snapshot('关注tab:单个关注调登录')
         sleep(1)
-        recorder().stop_recording(output='%s单个用户关注登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s单个用户关注登录7.mp4' % RECORDER_PATH)
 
     def test_08_login(self):
         '''搜索结果：关注调登录'''
@@ -119,7 +119,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['follow']).click()
         sim_code_login()
         sleep(1)
-        recorder().stop_recording(output='%s搜索关注调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s搜索关注调登录8.mp4' % RECORDER_PATH)
 
     def test_09_login(self):
         '''精选页面：关注调登录'''
@@ -130,7 +130,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         poco(yaml_data['follow']).click()
         get_snapshot('精选页面：关注调登录')
-        recorder().stop_recording(output='%s精选关注调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s精选关注调登录9.mp4' % RECORDER_PATH)
 
     def test_10_login(self):
         '''精选页面：点赞调登录'''
@@ -140,7 +140,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         poco(yaml_data['praise']).click()
         get_snapshot('精选页面：点赞调登录')
-        recorder().stop_recording(output='%s精选点赞调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s精选点赞调登录10.mp4' % RECORDER_PATH)
 
     def test_11_login(self):
         '''精选页面：分享面板收藏调登录'''
@@ -152,7 +152,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         poco(yaml_data['favorites']).click()
         get_snapshot('精选页面：分享面板收藏调登录')
-        recorder().stop_recording(output='%s分享面板收藏调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s分享面板收藏调登录11.mp4' % RECORDER_PATH)
 
     def test_12_login(self):
         '''全屏页面：关注调登录'''
@@ -163,16 +163,17 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         sleep(1)
         get_snapshot('全屏页面：关注调登录')
-        recorder().stop_recording(output='%s全屏关注调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s全屏关注调登录12.mp4' % RECORDER_PATH)
 
     def test_13_login(self):
         '''全屏页面：说点什么调登录'''
         stars_app()
         recorder().start_recording(max_time=1800)
+        sleep(0.5)
         poco(yaml_data['des']).click()
-        poco().click()
-        sim_code_login()
         poco(yaml_data['comment']).click()
+        sim_code_login()
+        poco(yaml_data['comments']).click()
         value = ''.join(random.sample(string.digits + string.ascii_letters, 2))   #随机生成字母+数字，长度为2位字符
         sleep(1)
         get_snapshot('说点什么调登录，并评论')
@@ -180,7 +181,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['submit']).click()
         poco(yaml_data['back']).click()
         sleep(1)
-        recorder().stop_recording(output='%s全屏说点什么调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s全屏说点什么调登录13.mp4' % RECORDER_PATH)
 
     def test_14_login(self):
         '''全屏页面：点赞调登录'''
@@ -194,7 +195,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['like']).click()
         get_snapshot('全屏页面：点赞调登录')
         sleep(1)
-        recorder().stop_recording(output='%s全屏点赞调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s全屏点赞调登录14.mp4' % RECORDER_PATH)
 
     def test_15_login(self):
         '''全屏页面：收藏调登录'''
@@ -206,7 +207,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['favorites']).click()
         get_snapshot('全屏页面：收藏调登录')
         sleep(1)
-        recorder().stop_recording(output='%s全屏页面收藏调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s全屏页面收藏调登录15.mp4' % RECORDER_PATH)
 
     def test_16_login(self):
         '''test16-18是一条用例：全屏切横屏'''
@@ -239,7 +240,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['follow']).click()
         get_snapshot('横屏页面：关注调登录')
         sleep(1)
-        recorder().stop_recording(output='%s横屏关注调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s横屏关注调登录18.mp4' % RECORDER_PATH)
 
 #如果16-18写一个方法的话，横屏无法登录
 
@@ -259,7 +260,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['ok']).click()
         get_snapshot('精选页面：分享面板举报调登录')
         sleep(1)
-        recorder().stop_recording(output='%s精选分享举报调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s精选分享举报调登录19.mp4' % RECORDER_PATH)
 
     def test_20_login(self):
         '''全屏页面：分享面板举报调登录'''
@@ -275,7 +276,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data["ok"]).click()
         get_snapshot('全屏页面：分享面板举报调登录')
         sleep(1)
-        recorder().stop_recording(output='%s全屏分享举报调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s全屏分享举报调登录20.mp4' % RECORDER_PATH)
 
 
 
@@ -295,7 +296,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['ok']).click()
         get_snapshot('取消拉黑用户')
         sleep(1)
-        recorder().stop_recording(output='%s拉黑用户调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s拉黑用户调登录21.mp4' % RECORDER_PATH)
 
     def test_22_login(self):
         '''消息调登录'''
@@ -307,7 +308,7 @@ class TestLogin(unittest.TestCase):
         sleep(1)
         get_snapshot('消息调登录')
         sleep(2)
-        recorder().stop_recording(output='%s消息调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s消息调登录22.mp4' % RECORDER_PATH)
 
     def test_23_login(self):
         '''发布调登录'''
@@ -316,7 +317,7 @@ class TestLogin(unittest.TestCase):
         poco(text='发布').click()
         sim_code_login()
         sleep(2)
-        recorder().stop_recording(output='%s发布调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s发布调登录23.mp4' % RECORDER_PATH)
 
 
 
@@ -329,7 +330,7 @@ class TestLogin(unittest.TestCase):
         sim_code_login()
         poco(yaml_data['action']).click()
         get_snapshot('用户主页调登录')
-        recorder().stop_recording(output='%s用户主页调登录.mp4' % RECORDER_PATH)
+        recorder().stop_recording(output='%s用户主页调登录24.mp4' % RECORDER_PATH)
 
 
 

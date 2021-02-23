@@ -20,6 +20,7 @@ black_author: 'com.yixia.videoeditor:id/btn_black_author'
 
 
 comment:  'com.yixia.videoeditor:id/tv_comment'
+comments: 'com.yixia.videoeditor:id/btn_comment'
 cover:  'com.yixia.videoeditor:id/iv_cover'
 cancel: 'com.yixia.videoeditor:id/btn_cancel'
 camera: 'com.yixia.videoeditor:id/btn_camera'
