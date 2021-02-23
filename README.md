@@ -24,3 +24,5 @@ discover = unittest.defaultTestLoader.discover(TEST_PATH, '*.py')    运行全�
 #snaphot   存放操作过程的截图
 
 #test_case  存放测试用例
+
+#recorder  增加录屏
