@@ -1,8 +1,16 @@
 # androidmiaopai
-androidmiaopaiuiautomaitor
+
+
+执行自动化前提条件：
+1、base-tools-recorder()  设备号进行修改
+2、检查手机是否第三方软件是否是登录状态
+3、检查自动化的apk包是否是最新包
+
+
+
+
 
 #base
-bases；暂无使用
 config:配置路径
 tools：公共方法
 
@@ -25,4 +33,4 @@ discover = unittest.defaultTestLoader.discover(TEST_PATH, '*.py')    运行全�
 
 #test_case  存放测试用例
 
-#recorder  增加录屏
+#recorder  存放录屏
