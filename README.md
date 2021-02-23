@@ -1,9 +1,12 @@
-# androidmiaopai
+# Androidmiaopai
 
 
 执行自动化前提条件：
+
 1、base-tools-recorder()  设备号进行修改
+
 2、检查手机是否第三方软件是否是登录状态
+
 3、检查自动化的apk包是否是最新包
 
 
