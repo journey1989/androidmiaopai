@@ -177,7 +177,7 @@ from base.config import DATA_PATH
 搜索条件用
 '''
 def get_searchdata(num):
-    list_dir = f'%s/searchdata.txt'%DATA_PATH
+    list_dir = f'%s/searchdata.txt' % DATA_PATH
 
     with open(list_dir, 'r') as f:
         l = f.readlines()
@@ -388,3 +388,54 @@ def test_finsih():
     engine.runAndWait()
 
 
+def share3():
+    if poco('com.yixia.videoeditor:id/btn_black_author').exists():
+        poco('com.yixia.videoeditor:id/btn_black_author').click()
+        sim_code_login()
+        poco('com.yixia.videoeditor:id/btn_black_author').click()
+        poco("com.yixia.videoeditor:id/btn_ok").click()
+    else:
+        log.debug('=======不显示拉黑入口===========')
+    if poco(text='微信').exists():
+        poco('com.yixia.videoeditor:id/btn_wechat').click()
+        sleep(2)
+        poco('com.tencent.mm:id/c55').click()  # 搜索栏
+        sleep(0.5)
+        poco('com.tencent.mm:id/bhn').click()  # 激活搜索栏
+        sleep(0.5)
+        text('文件传输助手')  # 输入搜索内容
+        poco('com.tencent.mm:id/gbv').click()  # 点击搜索内容
+        sleep(0.5)
+        poco('com.tencent.mm:id/doz').click()  # 点击分享
+        poco('com.tencent.mm:id/dom').click()  # 点击返回秒拍
+        sleep(2)
+        poco('com.yixia.videoeditor:id/btn_group').click()
+        keyevent("KEYCODE_BACK")
+    else:
+        log.debug('手机未安装微信，不分享微信')
+    if poco(text='QQ').exists():
+        poco('com.yixia.videoeditor:id/btn_qq').click()
+        sleep(1)
+        poco('com.tencent.mobileqq:id/text1')[0].click()
+        poco("com.tencent.mobileqq:id/dialogRightBtn").click()   #发送消息
+        poco('com.tencent.mobileqq:id/dialogLeftBtn').click()  #返回秒拍
+        sleep(1)
+        poco('com.yixia.videoeditor:id/btn_qz').click()
+        sleep(1)
+        poco('com.tencent.mobileqq:id/ivTitleBtnLeft').click()
+    else:
+        log.debug('手机未安装QQ，不分享QQ')
+    if poco(text='微博').exists():
+        poco('com.yixia.videoeditor:id/btn_weibo').click()
+        sleep(4)
+        poco('com.sina.weibo:id/titleBack').click()
+        poco(text='不保存').click()
+    else:
+        log.debug('手机未安装微博，不分享微博')
+    poco('com.yixia.videoeditor:id/btn_link').click()
+    if poco('com.yixia.videoeditor:id/btn_system').exists():
+       poco('com.yixia.videoeditor:id/btn_system').click()
+       keyevent("KEYCODE_BACK")
+    else:
+        log.debug('=====无系统分享=====')
+        poco('com.yixia.videoeditor:id/btn_cancel').click()

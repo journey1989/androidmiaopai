@@ -81,6 +81,7 @@ class TestShare(unittest.TestCase):
       def test_06_share(self):
           '''用户主页分享：微信、qq、微博、复制链接'''
           recorder().start_recording(max_time=1800)
+          stars_app()
           poco(text='精选').click()
           poco(yaml_data['avatar']).click()
           poco(yaml_data['share']).click()
@@ -92,11 +93,12 @@ class TestShare(unittest.TestCase):
       def test_07_share(self):
           '''发现：活动分享'''
           recorder().start_recording(max_time=1800)
-          keyevent("KEYCODE_BACK")
+          stars_app()
           poco(text='发现').click()
+          sleep(0.5)
           if poco(text='春暖中国').exists():
               poco(yaml_data['topic_share']).click()
-              share2()
+              share3()
           else:
               log.debug('======春暖中国活动已下线======')
           recorder().stop_recording(output='%s发现活动分享.mp4' % RECORDER_PATH)

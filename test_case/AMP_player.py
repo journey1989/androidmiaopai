@@ -118,7 +118,7 @@ class TestPlayer(unittest.TestCase):
          poco(text='发现').click()
          if poco(text='三农').exists():
              poco(text='三农').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -141,7 +141,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='汽车').exists():
              poco(text='汽车').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -161,7 +161,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='生活').exists():
              poco(text='生活').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -180,7 +180,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='影视').exists():
              poco(text='影视').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -198,7 +198,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='社会').exists():
              poco(text='社会').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -216,7 +216,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='美食').exists():
              poco(text='美食').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -235,7 +235,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='旅行').exists():
              poco(text='旅行').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)
@@ -354,7 +354,7 @@ class TestPlayer(unittest.TestCase):
          recorder().start_recording(max_time=1800)
          if poco(text='种草').exists():
              poco(text='种草').click()
-             for i in range(5):
+             for i in range(3):
                  if poco(yaml_data['cover']).exists():
                      poco(yaml_data['cover'])[i].long_click()
                      sleep(3)

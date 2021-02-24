@@ -326,7 +326,7 @@ class TestLogin(unittest.TestCase):
         stars_app()
         recorder().start_recording(max_time=1800)
         poco(yaml_data['avatar']).click()
-        poco().click()
+        poco(yaml_data['action']).click()
         sim_code_login()
         poco(yaml_data['action']).click()
         get_snapshot('用户主页调登录')
