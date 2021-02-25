@@ -1,4 +1,4 @@
-from base.tools import *
+from common.tools import *
 import unittest,string,random,yaml
 
 from base.config import RECORDER_PATH
@@ -10,7 +10,7 @@ auto_setup(__file__)
 '''
 我的
 '''
-with open('%s/resourceid.yaml') as f:
+with open('%s/resourceid.yaml' %DATA_PATH) as f:
     yaml_data = yaml.load(f)
 
 class TestMy(unittest.TestCase):
@@ -18,15 +18,20 @@ class TestMy(unittest.TestCase):
     def setUp(self) -> None:
         pass
 
+
+
+
     def test_01_my(self):
         '''我的：编辑资料'''
+        sleep(10)
+        log.info('=======我的==========')
         stars_app()
         recorder().start_recording(max_time=1800)
         poco(text='我的').click()
         poco(yaml_data['avatar']).click()
         sim_code_login()
         poco(yaml_data['action']).click()
-        poco(yaml_data['edit_profile_photo']).click()
+        poco(text='点击更换头像').click()
         if poco(yaml_data['permission_allow_button']):
             poco(yaml_data['permission_allow_button']).click()
             poco(yaml_data['edit_profile_photo']).click()
@@ -34,7 +39,6 @@ class TestMy(unittest.TestCase):
             poco(yaml_data['thumbnail'])[value].click()
             poco(yaml_data['menu_crop']).click()
         else:
-            poco(yaml_data['edit_profile_photo']).click()
             value = random.randint(0,4)
             poco(yaml_data['media_thumbnail'])[value].click()
             poco(yaml_data['menu_crop']).click()
@@ -68,7 +72,7 @@ class TestMy(unittest.TestCase):
     def test_02_my(self):
         '''个人粉丝'''
         recorder().start_recording(max_time=1800)
-        poco(yaml_data['followers']).click()
+        poco(yaml_data['follows']).click()
         sleep(2)
         get_snapshot('个人粉丝页面')
         keyevent("KEYCODE_BACK")
@@ -132,7 +136,7 @@ class TestMy(unittest.TestCase):
         '''用户：粉丝列表'''
         recorder().start_recording(max_time=1800)
         poco(text='首页').click()
-        poco(yaml_data['vatar']).click()
+        poco(yaml_data['avatar']).click()
         poco(yaml_data['follows']).click()
         if poco(yaml_data['follow']).exists():
             poco(yaml_data['follow']).click()

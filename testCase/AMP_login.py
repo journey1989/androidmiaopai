@@ -1,5 +1,5 @@
 from base.config import RECORDER_PATH
-from base.tools import *
+from common.tools import *
 import unittest,string,random,yaml
 
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
@@ -27,8 +27,10 @@ class TestLogin(unittest.TestCase):
         pass
 
 
+
     def test_01_login(self):
         '''一键登录'''
+        log.info('=======登录==========')
         stars_app()
         recorder().start_recording(max_time=1800)
         poco(text='我的').click()
@@ -58,7 +60,6 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['avatar']).click()
         wechat_login()
         get_snapshot('微信登录')
-        sleep(1)
         value = poco(yaml_data['name']).attr('text')
         assert_equal(value, '秒拍微信登录',  msg='微信登录成功')
         sleep(1)
@@ -256,7 +257,8 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['feedback']).click()
         sim_code_login()
         poco(yaml_data['feedback']).click()
-        poco(text='含有广告').click()
+        t = ['含有广告', '反动', '色情低俗', '视频无法播放', '欺诈或恶意营销']
+        poco(text=random.choice(t)).click()
         poco(yaml_data['ok']).click()
         get_snapshot('精选页面：分享面板举报调登录')
         sleep(1)
@@ -272,7 +274,8 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['feedback']).click()
         sim_code_login()
         poco(yaml_data['feedback']).click()
-        poco(text='含有广告').click()
+        t = ['含有广告', '反动', '色情低俗', '视频无法播放', '欺诈或恶意营销']
+        poco(text=random.choice(t)).click()
         poco(yaml_data["ok"]).click()
         get_snapshot('全屏页面：分享面板举报调登录')
         sleep(1)
@@ -331,6 +334,7 @@ class TestLogin(unittest.TestCase):
         poco(yaml_data['action']).click()
         get_snapshot('用户主页调登录')
         recorder().stop_recording(output='%s用户主页调登录24.mp4' % RECORDER_PATH)
+
 
 
 

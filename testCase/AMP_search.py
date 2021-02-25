@@ -1,7 +1,5 @@
 from base.config import RECORDER_PATH
-from airtest.core.android.adb import *
-from airtest.core.android.recorder import *
-from base.tools import *
+from common.tools import *
 import unittest,string,random,yaml
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
@@ -19,9 +17,14 @@ class TestSearch(unittest.TestCase):
         pass
 
 
+
+
+
     def test_01_search(self):
         '''搜索条件:通过关键字查看搜索结果'''
-        stars_app()
+        sleep(10)
+        log.info('=======搜索==========')
+        miaopaiinto()
         recorder().start_recording(max_time=1800)
         poco(yaml_data['search']).click()
         poco(yaml_data['input']).set_text(get_searchdata(0))

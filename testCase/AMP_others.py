@@ -1,5 +1,5 @@
-from base.tools import *
-import unittest,string,random,yaml
+from common.tools import *
+import unittest, yaml
 
 from base.config import RECORDER_PATH
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
@@ -21,8 +21,13 @@ class TestOthers(unittest.TestCase):
       def setUp(self) -> None:
           pass
 
+
+
+
       def test_01_others(self):
           '''精选顶部广告'''
+          sleep(10)
+          log.info('=======其他==========')
           stars_app()
           recorder().start_recording(max_time=1800)
           if poco(yaml_data['loopviewpager']).exists():

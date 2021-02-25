@@ -1,4 +1,4 @@
-from base.tools import *
+from common.tools import *
 from base.config import RECORDER_PATH
 import unittest,string,random,yaml
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
@@ -10,14 +10,18 @@ with open('%s/resourceid.yaml'%DATA_PATH) as f:
     yaml_data = yaml.load(f)
 
 
-class TestSting(unittest.TestCase):
+class TestSeting(unittest.TestCase):
 
     def setUp(self) -> None:
         pass
 
 
+
+
     def test_01_setting(self):
         '''设置：青少年模式'''
+        sleep(10)
+        log.info('=======设置==========')
         stars_app()
         recorder().start_recording(max_time=1800)
         poco(text='我的').click()

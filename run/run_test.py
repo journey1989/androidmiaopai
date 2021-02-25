@@ -1,7 +1,10 @@
 from base.config import REPORT_PATH,TEST_PATH
-import time,unittest,os
+import unittest
 from BeautifulReport import BeautifulReport as bf
-from base.tools import *
+from common.tools import *
+import datetime
+
+
 
 
 def report():
@@ -14,9 +17,16 @@ def report():
     bf(discover).report(description='秒拍ui自动化测试报告', filename=report_name, report_dir=REPORT_PATH, theme='theme_cyan')
 
 
-
+before_time = datetime.datetime.now()
+log.debug('自动化开始时间%s' % before_time)
 report()
+curr_time = datetime.datetime.now()
+log.debug('自动化结束时间%s' % curr_time)
 test_finsih()
+now = curr_time - before_time
+log.debug('自动化使用：%s'% now)
+
+
 
 
 

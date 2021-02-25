@@ -59,6 +59,7 @@ edit_profile_photo: 'com.yixia.videoeditor:id/image_user_edit_profile_photo'
 
 
 
+
 follow: 'com.yixia.videoeditor:id/btn_follow'
 favorites:  'com.yixia.videoeditor:id/btn_favorites'
 follow_all: 'com.yixia.videoeditor:id/btn_follow_all'

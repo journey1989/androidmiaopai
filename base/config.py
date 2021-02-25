@@ -8,7 +8,7 @@ BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOG_PATH = os.path.join(BASE_PATH, 'log')
 REPORT_PATH = os.path.join(BASE_PATH, 'report/')
 SNAPSHOT_PATH = os.path.join(BASE_PATH, 'snapshot/')
-TEST_PATH =  os.path.join(BASE_PATH, 'test_case/')
+TEST_PATH =  os.path.join(BASE_PATH, 'testCase/')
 DATA_PATH = os.path.join(BASE_PATH, 'data')
 
 nowtime = time.strftime('%Y%m%d %H%M%S')
@@ -17,9 +17,3 @@ logname = os.path.join(LOG_PATH, 'logs.txt')
 
 log = nnlog.Logger(file_name=logname, level='debug', when='D')
 
-
-print(RECORDER_PATH)
-
-
-
-print(logname)

@@ -1,8 +1,6 @@
-from base.tools import *
-import unittest,string,random,yaml
-from airtest.core.android.adb import *
+from common.tools import *
+import unittest, yaml
 from base.config import RECORDER_PATH
-from airtest.core.android.recorder import *
 
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
@@ -18,8 +16,13 @@ class TestRelease(unittest.TestCase):
        def setUp(self) -> None:
            pass
 
+
+
+
        def test_01_release(self):
            '''发布:调登录'''
+           sleep(10)
+           log.info('=======发布==========')
            stars_app()
            recorder().start_recording(max_time=1800)
            poco(text='发布').click()
@@ -71,23 +74,31 @@ class TestRelease(unittest.TestCase):
                keyevent("KEYCODE_BACK")
            poco(yaml_data['edit_title']).set_text('airtest发布视频')
            poco(yaml_data['publish']).click()
-           sleep(10)
+           for i in range(3):
+               sleep(2)
+               if poco(yaml_data['publish']).exists():
+                   poco(yaml_data['publish']).click()
+           miaopaiinto()
            recorder().stop_recording(output='%s编辑视频封面.mp4' % RECORDER_PATH)
 
 
        def test_04_release(self):
            '''发布：上传视频'''
            recorder().start_recording(max_time=1800)
-           poco(text='发布').click()
+           ele = poco(text='发布')
+           e = poco.wait_for_any([ele], timeout=1800)
+           e.click()
            poco(yaml_data['album']).click()  #上传
            if poco(yaml_data['media_thumbnail']).exists():
                poco(yaml_data['media_thumbnail'])[1].click()   #vivo手机正常，oppo手机不支持
                poco(yaml_data['edit_title']).set_text('airtest发布视频')
                sleep(1)
                poco(yaml_data['publish']).click()
-               sleep(10)
-               if poco(yaml_data['publish']).exists():
-                   poco(yaml_data['publish']).click()
+               for i in range(3):
+                   sleep(2)
+                   if poco(yaml_data['publish']).exists():
+                       poco(yaml_data['publish']).click()
+               miaopaiinto()
 
            else:
                poco(yaml_data['image_cancel']).click()
@@ -98,7 +109,9 @@ class TestRelease(unittest.TestCase):
        def test_05_release(self):
            '''发布：查看发布视频'''
            recorder().start_recording(max_time=1800)
-           poco(text='我的').click()
+           ele = poco(text='我的')
+           e = poco.wait_for_any([ele], timeout=1800)
+           e.click()
            poco(yaml_data['cover'])[0].click()
            sleep(2)
            keyevent("KEYCODE_BACK")

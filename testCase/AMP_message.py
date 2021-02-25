@@ -1,4 +1,4 @@
-from base.tools import *
+from common.tools import *
 import unittest, yaml
 from base.config import RECORDER_PATH
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
@@ -17,14 +17,17 @@ class TestMessage(unittest.TestCase):
     def setUp(self) -> None:
         pass
 
+
+
     def test_01_message(self):
         '''消息:打开通知开关再关闭'''
+        sleep(10)
+        log.debug('======执行消息======')
         stars_app()
         recorder().start_recording(max_time=1800)
         poco(text='消息').click()
         poco(text='登录/注册').click()
         sim_code_login()
-        sleep(1)
         poco(text='系统通知').click()
         poco(yaml_data['setting']).click()
         poco(yaml_data['message_switch']).click()

@@ -16,14 +16,18 @@ def  stars_app():
     log.debug('=====执行清除数据，启动app=====')
     clear_app('com.yixia.videoeditor')
     start_app('com.yixia.videoeditor')
-    sleep(2)
-    poco('com.yixia.videoeditor:id/btn_agree').click()
-    if poco('com.android.permissioncontroller:id/permission_allow_button1').exists():
-       poco('com.android.permissioncontroller:id/permission_allow_button1').click()
-       sleep(1)
-       poco('com.yixia.videoeditor:id/tv_quit_app').click()
+    ele = poco('com.yixia.videoeditor:id/btn_agree')
+    e = poco.wait_for_any([ele], timeout=1800)
+    e.click()
+    if poco(text='始终允许').exists():
+        poco(text='始终允许').click()
+        ele1 = poco('com.yixia.videoeditor:id/tv_quit_app')
+        e1 = poco.wait_for_any([ele1], timeout=1800)
+        e1.click()
     else:
-       poco('com.yixia.videoeditor:id/tv_quit_app').click()
+        ele1 = poco('com.yixia.videoeditor:id/tv_quit_app')
+        e1 = poco.wait_for_any([ele1], timeout=1800)
+        e1.click()
 
 
 '''
@@ -208,20 +212,16 @@ def teenager_mode():
 def share():
     if poco(text='微信').exists():
         poco('com.yixia.videoeditor:id/btn_wechat').click()
-        sleep(1)
-        if poco('com.tencent.mm:id/gbv').exists():
-            poco('com.tencent.mm:id/gbv')[0].click()   #微信聊天分享列表
-            poco('com.tencent.mm:id/doz').click()
-            poco('com.tencent.mm:id/dom').click()
-        else:
-            poco('com.tencent.mm:id/c55').click()
-            poco('com.tencent.mm:id/bhn').click()
-            text('文件传输助手')
-            poco('com.tencent.mm:id/doz').click()
-            poco('com.tencent.mm:id/dom').click()
-
-
-        sleep(1)
+        sleep(2)
+        poco('com.tencent.mm:id/c55').click()  # 搜索栏
+        sleep(0.5)
+        poco('com.tencent.mm:id/bhn').click()  # 激活搜索栏
+        sleep(0.5)
+        text('文件传输助手')  # 输入搜索内容
+        poco('com.tencent.mm:id/gbv').click()  # 点击搜索内容
+        sleep(0.5)
+        poco('com.tencent.mm:id/doz').click()  # 点击分享
+        poco('com.tencent.mm:id/dom').click()  # 点击返回秒拍
         poco(text='分享').click()
         poco('com.yixia.videoeditor:id/btn_group').click()
         keyevent("KEYCODE_BACK")
@@ -232,8 +232,9 @@ def share():
     poco(text='分享').click()
     if poco(text='QQ').exists():
         poco('com.yixia.videoeditor:id/btn_qq').click()
-        sleep(1)
-        poco('com.tencent.mobileqq:id/text1')[0].click()
+        ele1 = poco('com.tencent.mobileqq:id/text1')
+        e = poco.wait_for_any([ele1], timeout=1800)
+        e.click()
         poco("com.tencent.mobileqq:id/dialogRightBtn").click()   #发送消息
         poco('com.tencent.mobileqq:id/dialogLeftBtn').click()  #返回秒拍
 
@@ -250,8 +251,9 @@ def share():
     poco(text='分享').click()
     if poco(text='微博').exists():
         poco('com.yixia.videoeditor:id/btn_weibo').click()
-        sleep(4)
-        poco('com.sina.weibo:id/titleBack').click()
+        ele = poco(text='取消')
+        e = poco.wait_for_any([ele],timeout=1800)
+        e.click()
         poco(text='不保存').click()
     else:
         log.debug('手机未安装微博，不分享微博')
@@ -275,20 +277,16 @@ def share():
 def share1():
     if poco(text='微信').exists():
         poco('com.yixia.videoeditor:id/btn_wechat').click()
-        sleep(1)
-        if poco('com.tencent.mm:id/gbv').exists():
-            poco('com.tencent.mm:id/gbv')[0].click()   #微信聊天分享列表
-            poco('com.tencent.mm:id/doz').click()
-            poco('com.tencent.mm:id/dom').click()
-        else:
-            poco('com.tencent.mm:id/c55').click()
-            poco('com.tencent.mm:id/bhn').click()
-            text('文件传输助手')
-            poco('com.tencent.mm:id/doz').click()
-            poco('com.tencent.mm:id/dom').click()
-
-
-        sleep(1)
+        sleep(2)
+        poco('com.tencent.mm:id/c55').click()  # 搜索栏
+        sleep(0.5)
+        poco('com.tencent.mm:id/bhn').click()  # 激活搜索栏
+        sleep(0.5)
+        text('文件传输助手')  # 输入搜索内容
+        poco('com.tencent.mm:id/gbv').click()  # 点击搜索内容
+        sleep(0.5)
+        poco('com.tencent.mm:id/doz').click()  # 点击分享
+        poco('com.tencent.mm:id/dom').click()  # 点击返回秒拍
         poco('com.yixia.videoeditor:id/btn_share').click()
         poco('com.yixia.videoeditor:id/btn_group').click()
         keyevent("KEYCODE_BACK")
@@ -300,7 +298,7 @@ def share1():
     if poco(text='QQ').exists():
         poco('com.yixia.videoeditor:id/btn_qq').click()
         sleep(2)
-        poco('com.tencent.mobileqq:id/text1')[0].click()
+        poco('com.tencent.mobileqq:id/text1').click()
         poco("com.tencent.mobileqq:id/dialogRightBtn").click()   #发送消息
         poco('com.tencent.mobileqq:id/dialogLeftBtn').click()  #返回秒拍
 
@@ -317,8 +315,9 @@ def share1():
     poco('com.yixia.videoeditor:id/btn_share').click()
     if poco(text='微博').exists():
         poco('com.yixia.videoeditor:id/btn_weibo').click()
-        sleep(4)
-        poco('com.sina.weibo:id/titleBack').click()
+        ele = poco('com.sina.weibo:id/titleBack')
+        e = poco.wait_for_any([ele], timeout=1800)
+        e.click()
         poco(text='不保存').click()
     else:
         log.debug('手机未安装微博，不分享微博')
@@ -336,17 +335,38 @@ def share1():
  #横屏分享
  '''
 def share2():
-    poco('com.yixia.videoeditor:id/btn_share').click()
+    poco('com.yixia.videoeditor:id/btn_link').click()
+    if poco('com.yixia.videoeditor:id/btn_weibo').exists():
+        poco('com.yixia.videoeditor:id/btn_weibo').click()
+        ele = poco('com.sina.weibo:id/titleBack')
+        e = poco.wait_for_any([ele], timeout=1800)
+        e.click()
+        poco(text='不保存').click()
+    else:
+        log.debug('手机未安装微博')
+    if poco('com.yixia.videoeditor:id/btn_black_author').exists():
+        poco('com.yixia.videoeditor:id/btn_black_author').click()
+        sim_code_login()
+        poco('com.yixia.videoeditor:id/btn_black_author').click()
+        poco("com.yixia.videoeditor:id/btn_ok").click()
+    else:
+        log.debug('=======不显示拉黑入口===========')
+
     if poco(text='微信').exists():
         poco('com.yixia.videoeditor:id/btn_wechat').click()
-        keyevent("KEYCODE_BACK")
-        sleep(1)
+        poco('com.tencent.mm:id/c55').click()  # 搜索栏
+        sleep(0.5)
+        poco('com.tencent.mm:id/bhn').click()  # 激活搜索栏
+        sleep(0.5)
+        text('文件传输助手')  # 输入搜索内容
+        poco('com.tencent.mm:id/gbv').click()  # 点击搜索内容
+        sleep(0.5)
+        poco('com.tencent.mm:id/doz').click()  # 点击分享
+        poco('com.tencent.mm:id/dom').click()  # 点击返回秒拍
         poco('com.yixia.videoeditor:id/btn_group').click()
         keyevent("KEYCODE_BACK")
-
     else:
         log.debug('手机未安装微信，不分享微信')
-    sleep(2)
     if poco(text='QQ').exists():
         poco('com.yixia.videoeditor:id/btn_qq').click()
         sleep(1)
@@ -356,21 +376,11 @@ def share2():
         sleep(1)
         poco('com.tencent.mobileqq:id/ivTitleBtnLeft').click()
         keyevent("KEYCODE_BACK")
-        keyevent("KEYCODE_BACK")
-
     else:
         log.debug('手机未安装QQ，不分享QQ')
-    sleep(1)
-    # if poco(text='微博').exists():
-    #     poco('com.yixia.videoeditor:id/btn_weibo').click()
-    #     keyevent("KEYCODE_BACK")
-    #     sleep(1)
-    #     if poco(text='不保存').exists():
-    #         poco(text='不保存').click()
-    poco('com.yixia.videoeditor:id/btn_link').click()
-    sleep(1)
-    poco('com.yixia.videoeditor:id/btn_system').click()
-    keyevent("KEYCODE_BACK")
+
+
+
 
 def recorder():
     adb = ADB(serialno="9523d12")
@@ -416,7 +426,7 @@ def share3():
     if poco(text='QQ').exists():
         poco('com.yixia.videoeditor:id/btn_qq').click()
         sleep(1)
-        poco('com.tencent.mobileqq:id/text1')[0].click()
+        poco('com.tencent.mobileqq:id/text1').click()
         poco("com.tencent.mobileqq:id/dialogRightBtn").click()   #发送消息
         poco('com.tencent.mobileqq:id/dialogLeftBtn').click()  #返回秒拍
         sleep(1)
@@ -427,8 +437,9 @@ def share3():
         log.debug('手机未安装QQ，不分享QQ')
     if poco(text='微博').exists():
         poco('com.yixia.videoeditor:id/btn_weibo').click()
-        sleep(4)
-        poco('com.sina.weibo:id/titleBack').click()
+        ele = poco('com.sina.weibo:id/titleBack')
+        e = poco.wait_for_any([ele], timeout=1800)
+        e.click()
         poco(text='不保存').click()
     else:
         log.debug('手机未安装微博，不分享微博')
@@ -439,3 +450,8 @@ def share3():
     else:
         log.debug('=====无系统分享=====')
         poco('com.yixia.videoeditor:id/btn_cancel').click()
+
+
+def miaopaiinto():
+    stop_app('com.yixia.videoeditor')
+    start_app('com.yixia.videoeditor')

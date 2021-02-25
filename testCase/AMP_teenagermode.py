@@ -1,5 +1,5 @@
-from base.tools import *
-import unittest,string,random,yaml
+from common.tools import *
+import unittest, yaml
 from base.config import RECORDER_PATH
 
 
@@ -21,8 +21,11 @@ class TestTeenager(unittest.TestCase):
         #os.system('adb devices')
 
 
+
     def test_01_teenager(self):
         '''青少年模式：首次启动进入青少年模式'''
+        sleep(10)
+        log.info('=======青少年==========')
         recorder().start_recording(max_time=1800)
         teenager_mode()
         sleep(1)
