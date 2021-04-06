@@ -16,18 +16,15 @@ def  stars_app():
     log.debug('=====执行清除数据，启动app=====')
     clear_app('com.yixia.videoeditor')
     start_app('com.yixia.videoeditor')
-    ele = poco('com.yixia.videoeditor:id/btn_agree')
-    e = poco.wait_for_any([ele], timeout=1800)
-    e.click()
-    if poco(text='始终允许').exists():
+    if poco('com.yixia.videoeditor:id/btn_agree').exists():
+        poco('com.yixia.videoeditor:id/btn_agree').click()
+    elif poco(text='允许').exists():
+        poco(text='允许').click()
+    elif poco(text='始终允许').exists():
         poco(text='始终允许').click()
-        ele1 = poco('com.yixia.videoeditor:id/tv_quit_app')
-        e1 = poco.wait_for_any([ele1], timeout=1800)
-        e1.click()
-    else:
-        ele1 = poco('com.yixia.videoeditor:id/tv_quit_app')
-        e1 = poco.wait_for_any([ele1], timeout=1800)
-        e1.click()
+    elif poco('com.yixia.videoeditor:id/tv_quit_app').exists():
+        poco('com.yixia.videoeditor:id/tv_quit_app').click()
+
 
 
 '''
@@ -100,8 +97,20 @@ def loginout_app():
 微信登录
 '''
 def wechat_login():
+    sleep(3)
     if poco('com.yixia.videoeditor:id/btn_switch').exists():
        poco('com.yixia.videoeditor:id/btn_switch').click()   #切换其他登录方式
+       if poco('com.yixia.videoeditor:id/btn_login_wx').exists():
+           poco('com.yixia.videoeditor:id/btn_login_wx').click()
+           poco('com.yixia.videoeditor:id/btn_protection_guideline_agree').click()
+           sleep(3)
+           if poco('com.yixia.videoeditor:id/btn_bind_phone_skip').exists():
+               poco('com.yixia.videoeditor:id/btn_bind_phone_skip').click()
+           else:
+               log.debug('======当前账号已绑定手机号=======')
+
+       else:
+           log.debug('======当前设备未安装微信，无法使用微信登录======')
     else:
         if poco('com.yixia.videoeditor:id/btn_login_wx').exists():
             poco('com.yixia.videoeditor:id/btn_login_wx').click()
@@ -119,8 +128,26 @@ def wechat_login():
 qq登录
 '''
 def qq_login():
+    sleep(3)
     if poco('com.yixia.videoeditor:id/btn_switch').exists():
        poco('com.yixia.videoeditor:id/btn_switch').click()   #切换其他登录方式
+       sleep(1)
+       if poco('com.yixia.videoeditor:id/btn_login_qq').exists():
+           poco('com.yixia.videoeditor:id/btn_login_qq').click()
+           poco('com.yixia.videoeditor:id/btn_protection_guideline_agree').click()
+           sleep(3)
+           poco('com.tencent.mobileqq:id/fds').click()
+           poco('com.tencent.mobileqq:id/b7p').click()
+           sleep(3)
+           if poco('com.yixia.videoeditor:id/btn_bind_phone_skip').exists():
+               poco('com.yixia.videoeditor:id/btn_bind_phone_skip').click()
+           else:
+
+               log.debug('======当前账号已绑定手机号=======')
+
+       else:
+
+           log.debug('======当前设备未安装qq，无法使用qq登录======')
     else:
         sleep(1)
         if poco('com.yixia.videoeditor:id/btn_login_qq').exists():
@@ -144,8 +171,22 @@ def qq_login():
 微博登录
 '''
 def weibo_login():
+    sleep(3)
     if poco('com.yixia.videoeditor:id/btn_switch').exists():
         poco('com.yixia.videoeditor:id/btn_switch').click()   #切换其他登录方式
+        sleep(1)
+        if poco('com.yixia.videoeditor:id/btn_login_wb').exists():
+            poco('com.yixia.videoeditor:id/btn_login_wb').click()
+            poco('com.yixia.videoeditor:id/btn_protection_guideline_agree').click()
+            sleep(3)
+            # poco('com.sina.weibo:id/new_bnLogin').click()
+            # sleep(3)
+            if poco('com.yixia.videoeditor:id/btn_bind_phone_skip').exists():
+                poco('com.yixia.videoeditor:id/btn_bind_phone_skip').click()
+            else:
+                log.debug('======当前账号已绑定手机号=======')
+        else:
+            log.debug('======当前设备未安装微博，无法使用微博登录======')
     else:
         sleep(1)
         if poco('com.yixia.videoeditor:id/btn_login_wb').exists():
@@ -383,7 +424,7 @@ def share2():
 
 
 def recorder():
-    adb = ADB(serialno="9523d12")
+    adb = ADB(serialno="SJE0217B18002911")
     recorder = Recorder(adb)  # 实例化
     return recorder
 
