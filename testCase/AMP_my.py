@@ -105,6 +105,8 @@ class TestMy:
             keyevent("KEYCODE_BACK")
         else:
             log.debug('======暂无作品')
+        poco(yaml_data['cover']).long_click()
+        poco(text='删除').click()
         recorder().stop_recording(output='%s个人作品.mp4' % RECORDER_PATH)
 
     @allure.title('我的：个人收藏')
