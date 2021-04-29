@@ -30,7 +30,7 @@ searchdata.txt   存放搜索条件，后期可以补充
 log.txt   存储代码中的操作记录
 
 
-#report    存放生成的测试报告
+#allure_report    存放生成的测试报告
 
 #run    运行测试用例：使用pytest+allure 框架
 if __name__ == '__main__':
