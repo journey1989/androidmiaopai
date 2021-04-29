@@ -212,6 +212,7 @@ text_view:  'com.yixia.videoeditor:id/edit_text_view'
 test_kids_mode_quit:  'com.yixia.videoeditor:id/test_kids_mode_quit'
 topic_share:  'com.yixia.videoeditor:id/tv_topic_share'
 title:  'com.yixia.videoeditor:id/tv_title'
+thumbnail:  'com.yixia.videoeditor:id/media_thumbnail'
 
 
 

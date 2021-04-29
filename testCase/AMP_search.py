@@ -1,27 +1,23 @@
 from base.config import RECORDER_PATH
 from common.tools import *
-import unittest,string,random,yaml
+import allure, string, random, yaml
+
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
 
-
-
-
-with open('%s/resourceid.yaml'%DATA_PATH) as f:
+with open('%s/resourceid.yaml' % DATA_PATH) as f:
     yaml_data = yaml.load(f)
 
-class TestSearch(unittest.TestCase):
 
+@allure.feature('遍历APP搜索模块')
+class TestSearch:
 
-    def setUp(self) -> None:
+    def setup(self) -> None:
         pass
 
-
-
-
-
+    @allure.title('搜索条件:通过关键字查看搜索结')
+    @allure.story('搜索条件:通过关键字查看搜索结')
     def test_01_search(self):
-        '''搜索条件:通过关键字查看搜索结果'''
         sleep(10)
         log.info('=======搜索==========')
         miaopaiinto()
@@ -34,9 +30,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:通过关键字查看搜索结果')
         recorder().stop_recording(output='%s搜索关键字.mp4' % RECORDER_PATH)
 
-
+    @allure.title('搜索条件:纯英文')
+    @allure.story('搜索条件:纯英文')
     def test_02_search(self):
-        '''搜索条件:纯英文'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         poco(yaml_data['input']).click()
@@ -45,8 +41,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:纯英文')
         recorder().stop_recording(output='%s纯英文.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索条件:纯中文')
+    @allure.story('搜索条件:纯中文')
     def test_03_search(self):
-        '''搜索条件:纯中文'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         poco(yaml_data['input']).click()
@@ -55,6 +52,8 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:纯中文')
         recorder().stop_recording(output='%s纯中文.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索条件:纯数字')
+    @allure.story('搜索条件:纯数字')
     def test_04_search(self):
         '''搜索条件:纯数字'''
         recorder().start_recording(max_time=1800)
@@ -65,9 +64,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:纯数字')
         recorder().stop_recording(output='%s纯数字.mp4' % RECORDER_PATH)
 
-
+    @allure.title('搜索条件:数字字母下划线')
+    @allure.story('搜索条件:数字字母下划线')
     def test_05_search(self):
-        '''搜索条件:数字字母下划线'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         poco(yaml_data['input']).click()
@@ -76,8 +75,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:数字字母下划线')
         recorder().stop_recording(output='%s数字字母下划线.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索条件:网址')
+    @allure.story('搜索条件:网址')
     def test_06_search(self):
-        '''搜索条件:网址'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         poco(yaml_data['input']).click()
@@ -86,8 +86,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:网址')
         recorder().stop_recording(output='%s网址.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索条件:表情')
+    @allure.story('搜索条件:表情')
     def test_07_search(self):
-        '''搜索条件:表情'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         poco(yaml_data['input']).click()
@@ -96,8 +97,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:表情')
         recorder().stop_recording(output='%s表情.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索条件:特殊字符')
+    @allure.story('搜索条件:特殊字符')
     def test_08_search(self):
-        '''搜索条件:特殊字符'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         str = string.punctuation
@@ -107,8 +109,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:特殊字符')
         recorder().stop_recording(output='%s特殊字符.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索条件:随机数字+字母组合')
+    @allure.story('搜索条件:随机数字+字母组合')
     def test_09_search(self):
-        '''搜索条件:随机数字+字母组合'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         vaule = ''.join(random.sample(string.digits + string.ascii_letters, 20))
@@ -118,8 +121,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('搜索条件:随机数字+字母组合')
         recorder().stop_recording(output='%s数字字母.mp4' % RECORDER_PATH)
 
+    @allure.title('删除搜索某条记录')
+    @allure.story('删除搜索某条记录')
     def test_10_search(self):
-        '''删除搜索某条记录'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clean']).click()
         vaule = ''.join(random.sample(string.digits + string.ascii_letters, 4))
@@ -131,8 +135,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('删除搜索某条记录')
         recorder().stop_recording(output='%s删除某条搜索记录.mp4' % RECORDER_PATH)
 
+    @allure.title('删除搜索全部记录')
+    @allure.story('删除搜索全部记录')
     def test_11_search(self):
-        '''删除搜索全部记录'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['clear']).click()
         poco(yaml_data['ok']).click()
@@ -140,8 +145,9 @@ class TestSearch(unittest.TestCase):
         get_snapshot('删除搜索全部记录')
         recorder().stop_recording(output='%s删除搜索全部记录.mp4' % RECORDER_PATH)
 
+    @allure.title('查看搜索视频')
+    @allure.story('查看搜索视频')
     def test_12_search(self):
-        '''查看搜索视频'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['input']).set_text(get_searchdata(8))
         keyevent("ENTER")
@@ -153,14 +159,15 @@ class TestSearch(unittest.TestCase):
         keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s查看搜索视频.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索结果：点击查看更多')
+    @allure.story('搜索结果：点击查看更多')
     def test_13_search(self):
-        '''搜索结果：点击查看更多'''
         recorder().start_recording(max_time=1800)
-        poco(text='查看更多')[0].click()  #查看用户tab
+        poco(text='查看更多')[0].click()  # 查看用户tab
         sleep(1)
         get_snapshot('查看用户tab')
         poco(text='综合').click()
-        poco(text='查看更多')[1].click()   #查看视频tab
+        poco(text='查看更多')[1].click()  # 查看视频tab
         sleep(1)
         get_snapshot('查看视频tab')
         swipe((561, 1686), (561, 245))
@@ -169,19 +176,14 @@ class TestSearch(unittest.TestCase):
         keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s查看更多按钮.mp4' % RECORDER_PATH)
 
+    @allure.title('搜索:取消按钮')
+    @allure.story('搜索:取消按钮')
     def test_14_search(self):
-        '''搜索:取消按钮'''
         recorder().start_recording(max_time=1800)
         poco(yaml_data['cancel']).click()
         sleep(1)
         get_snapshot('取消搜索，回到精选页面')
         recorder().stop_recording(output='%s退出搜索界面.mp4' % RECORDER_PATH)
 
-
-    def tearDown(self) -> None:
+    def teardown(self) -> None:
         pass
-
-
-
-if __name__ == '__main__':
-    unittest.main(verbosity=2)

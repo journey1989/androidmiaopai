@@ -1,6 +1,6 @@
 from common.tools import *
 from base.config import RECORDER_PATH
-import unittest,string,random,yaml
+import allure,string,random,yaml
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 auto_setup(__file__)
 
@@ -9,17 +9,18 @@ auto_setup(__file__)
 with open('%s/resourceid.yaml'%DATA_PATH) as f:
     yaml_data = yaml.load(f)
 
+@allure.feature('遍历APP设置模块')
+class TestSeting:
 
-class TestSeting(unittest.TestCase):
-
-    def setUp(self) -> None:
+    def setup(self) -> None:
         pass
 
 
 
-
+    @allure.story('设置：青少年模式')
+    @allure.title('设置：青少年模式')
     def test_01_setting(self):
-        '''设置：青少年模式'''
+
         sleep(10)
         log.info('=======设置==========')
         stars_app()
@@ -44,8 +45,10 @@ class TestSeting(unittest.TestCase):
             text("0")
         recorder().stop_recording(output='%s青少年模式.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：黑名单')
+    @allure.title('设置：黑名单')
     def test_02_setting(self):
-        '''设置：黑名单'''
+
         recorder().start_recording(max_time=1800)
         poco(text='我的').click()
         poco(yaml_data['back']).click()
@@ -61,8 +64,10 @@ class TestSeting(unittest.TestCase):
             keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s黑名单.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：我的钱包')
+    @allure.title('设置：我的钱包')
     def test_03_setting(self):
-        '''设置：我的钱包'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_wallet']).click()
         poco(text='常见问题').click()
@@ -80,16 +85,20 @@ class TestSeting(unittest.TestCase):
         keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s我的钱包.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：检查更新')
+    @allure.title('设置：检查更新')
     def test_04_setting(self):
-        '''设置：检查更新'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_check_update']).click()
         sleep(1)
         get_snapshot('检查更新')
         recorder().stop_recording(output='%s检查更新.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：隐私协议')
+    @allure.title('设置：隐私协议')
     def test_05_setting(self):
-        '''设置：隐私协议'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_privacy']).click()
         sleep(1)
@@ -97,8 +106,10 @@ class TestSeting(unittest.TestCase):
         keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s隐私协议.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：秒拍app声明')
+    @allure.title('设置：秒拍app声明')
     def test_06_setting(self):
-        '''设置：秒拍app声明'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_app_statement']).click()
         sleep(1)
@@ -106,8 +117,10 @@ class TestSeting(unittest.TestCase):
         keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s秒拍app声明.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：意见反馈')
+    @allure.title('设置：意见反馈')
     def test_07_setting(self):
-        '''设置：意见反馈'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_feedback']).click()
         sleep(1)
@@ -121,8 +134,10 @@ class TestSeting(unittest.TestCase):
         get_snapshot('提交意见反馈')
         recorder().stop_recording(output='%s提交意见反馈.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：清除缓存')
+    @allure.title('设置：清除缓存')
     def test_08_setting(self):
-        '''设置：清除缓存'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_clear_cache']).click()
         poco(yaml_data['ok']).click()
@@ -130,8 +145,10 @@ class TestSeting(unittest.TestCase):
         get_snapshot('清除缓存')
         recorder().stop_recording(output='%s清除缓存.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：高级设置')
+    @allure.title('设置：高级设置')
     def test_09_setting(self):
-        '''设置：高级设置'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_additional_setting']).click()
         poco(yaml_data['setting_logoff']).click()
@@ -141,8 +158,10 @@ class TestSeting(unittest.TestCase):
         keyevent("KEYCODE_BACK")
         recorder().stop_recording(output='%s高级设置.mp4' % RECORDER_PATH)
 
+    @allure.story('设置：退出登录')
+    @allure.title('设置：退出登录')
     def test_10_setting(self):
-        '''设置：退出登录'''
+
         recorder().start_recording(max_time=1800)
         poco(yaml_data['setting_login']).click()
         poco(yaml_data['ok']).click()
@@ -152,5 +171,5 @@ class TestSeting(unittest.TestCase):
         assert_equal(value, '登录/注册', msg='退出登录')
         recorder().stop_recording(output='%s退出登录.mp4' % RECORDER_PATH)
 
-    def tearDown(self) -> None:
+    def teardown(self) -> None:
         pass
