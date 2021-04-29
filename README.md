@@ -32,12 +32,11 @@ log.txt   存储代码中的操作记录
 
 #report    存放生成的测试报告
 
-#run    运行测试用例
-
-discover = unittest.defaultTestLoader.discover(TEST_PATH, 'player.py')    运行播放器模块的用例
-
-discover = unittest.defaultTestLoader.discover(TEST_PATH, '*.py')    运行全部的用例
-
+#run    运行测试用例：使用pytest+allure 框架
+if __name__ == '__main__':
+    pytest.main(["-v", "-s", "%sAMP_my.py" % TEST_PATH, "--alluredir=%s" % REPORT_PATH])    运行指定测试集脚本
+    pytest.main(["-v", "-s", "%sAMP_my.py::TestMy::test_01_my" % TEST_PATH, "--alluredir=%s" % REPORT_PATH])    运行指定测试脚本
+    
 #snaphot   存放操作过程的截图
 
 #test_case  存放测试用例
